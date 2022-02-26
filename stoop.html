@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <span id="hr">hr 00</span>
+     <span id="mnt">minutes 00</span>
+   <span>  sec</span>
+      <span id="sc">00</span> 
+       <span id="199">00 </span>
+</div>
+<br>
+<button id="start" onclick="start()">
+    start
+</button>
+<button id="stop"onclick="stop()">
+    stop
+</button>
+<button id="reset"onclick="restart()">
+    restart
+    
+</button>
+<script>
+var hr=0;
+var min=0;
+var sec=0;
+var cnt=0;
+var timer=false;
+function start(){
+    timer=true;
+    stopwatch();
+}
+function stop(){
+    timer=false;
+}
+function restart(){
+    timer=false;
+     cnt=cnt=00;
+     sec=sec=00;
+    min=0;
+    hr=0;
+    document.getElementById("199").innerHTML=cnt;
+    document.getElementById("sc").innerHTML=sec;
+}
+ function stopwatch(){
+     if(timer==true){
+     //setTimeout("stopwatch()", 10);
+     cnt=cnt+1;
+     document.getElementById("199").innerHTML=cnt;
+      setTimeout("stopwatch()", 10);
+ }
+ if (cnt==100){
+     cnt=0;
+     sec=sec+1;
+      document.getElementById("sc").innerHTML=sec;
+     
+ }
+ }
+</script>
+</body>
+</html>

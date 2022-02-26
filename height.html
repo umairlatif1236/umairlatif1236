@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+         <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+         <title>lenght meter</title>
+         <link rel="stylesheet" href="undefined_2.css">
+     </head >
+     <body id="mtr">
+         
+     <span>
+    feet
+</span>
+
+<input type="number" id="feet" value="0">
+<br>
+<span>cm</span>
+<input type="number" id="cm" value="0">
+ 
+<script>
+    let a=document.getElementById('feet');
+      let b=document.getElementById('cm');
+      
+      a.addEventListener("input",function(){
+           let c=this.value;
+           b.value=c*30.48;
+       //    console.log(b);
+          
+      })
+      b.addEventListener("input",function(){
+           let d=this.value;
+           a.value=d/30.48;
+      })
+    
+</script>
+     </body>
+ 
